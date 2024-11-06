@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/stylesheets/stars.css" />
 <div class="row">
-  <div class="col-6">
+  <div class="col-12 col-md-6">
     <div class="card mb-3">
       <div class="card-body">
         <div
@@ -86,9 +86,9 @@
       </div>
     </div>
   </div>
-  <div class="col-6">
-    <div id="map"></div>
-    <% if(currentUser) { %>
+  <div class="col-12 col-md-6">
+    <div id="map" class="mb-3"></div>
+    <% if (currentUser) { %>
     <h2 class="mt-2 mb-4">Leave a Review</h2>
     <form
       action="/campgrounds/<%= campground._id %>/reviews"
@@ -166,7 +166,7 @@
         <p class="starability-result" data-rating="<%= review.rating %>">
           Rated: <%= review.rating %> stars
         </p>
-        <h6 class="card-subtitle mb-2 text-muted">
+        <h6 class="card-subtitle mb-4 text-muted text-decoration-underline">
           <%= review.author.username %>
         </h6>
         <p><%= review.body %></p>
